@@ -1,0 +1,26 @@
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{8}{|c|}{FFT, $N=15$} \\
+$k_0 $ &\multicolumn{3}{l|}{$= \sin\left(\sfrac{\pi}{3}\right)\sin\left(\sfrac{\pi}{5}\right)$} & $k_1 $ &$= \sfrac{1}{2}$ & $k_2 $ &$= \sfrac{\sqrt{3}}{2}$\\ 
+$k_3 $ &\multicolumn{3}{l|}{$= \sin\left(\sfrac{\pi}{3}\right)\sin\left(\sfrac{3\pi}{5}\right)$} & $k_4 $ &$= \sfrac{1}{4}$ & $k_5 $ &$= \sfrac{\sqrt{3}}{8}$\\ 
+$k_6 $ &$= \sin\left(\sfrac{\pi}{5}\right)$ & $k_7 $ &$= \sin\left(\sfrac{2\pi}{5}\right)$ & $k_8 $ &$= \sfrac{\sqrt{5}}{4}$ & $k_9 $ &$= \sfrac{\sqrt{15}}{8}$\\ 
+$t_0 $ &$= x_5 + x_{10}$ & $t_1 $ &$= x_0 + t_0$ & $t_2 $ &$= x_{10} - x_5$ & $t_3 $ &$= x_0 - k_1t_0$\\ 
+$t_4 $ &$= x_8 + x_{13}$ & $t_5 $ &$= x_3 - k_1t_4$ & $t_6 $ &$= x_{13} - x_8$ & $t_7 $ &$= x_9$\\ 
+$t_8 $ &$= x_{14} + x_4$ & $t_9 $ &$= t_7 - k_1t_8$ & $t_a $ &$= x_4 - x_{14}$ & $t_b $ &$= x_2 + x_7$\\ 
+$t_c $ &$= x_{12} - k_1t_b$ & $t_d $ &$= x_7 - x_2$ & $t_e $ &$= x_{11} + x_1$ & $t_f $ &$= x_6 - k_1t_e$\\ 
+$t_g $ &$= x_1 - x_{11}$ & $t_h $ &$= t_g - t_a$ & $t_i $ &$= t_f - t_9$ & $t_j $ &$= t_5 - t_c$\\ 
+$t_k $ &$= t_6 - t_d$ & $t_l $ &$= x_3 + t_4$ & $t_m $ &$= x_{12} + t_b$ & $t_n $ &$= t_l + t_m$\\ 
+$t_o $ &$= x_6 + t_e$ & $t_p $ &$= t_7 + t_8$ & $t_q $ &$= t_o + t_p$ & $t_r $ &$= t_5 + t_c$\\ 
+$t_s $ &$= t_f + t_9$ & $t_t $ &$= t_r + t_s$ & $t_u $ &$= t_6 + t_d$ & $t_v $ &$= t_g + t_a$\\ 
+$t_w $ &$= k_9(t_u - t_v)$ & $t_x $ &$= t_u + t_v$ & $t_y $ &$= t_3 + t_t$ & $t_z $ &$= ik_2(t_2 + t_x)$\\ 
+$X_5 $ &$= t_y - t_z$ & $X_{10} $ &$= t_y + t_z$ & $t_A $ &$= k_8(t_n - t_q)$ & $t_B $ &$= t_n + t_q$\\ 
+$t_C $ &\multicolumn{3}{l|}{$= t_1 - k_4t_B$} & $t_D $ &$= t_o - t_p$ & $t_E $ &$= t_l - t_m$\\ 
+$t_F $ &\multicolumn{3}{l|}{$= i(k_7t_D - k_6t_E)$} & $t_G $ &\multicolumn{3}{l|}{$= i(k_6t_D + k_7t_E)$}\\ 
+$X_0 $ &$= t_1 + t_B$ & $t_H $ &$= t_A + t_C$ & $X_6 $ &$= t_H - t_G$ & $X_9 $ &$= t_G + t_H$\\ 
+$t_I $ &$= t_C - t_A$ & $X_3 $ &$= t_I - t_F$ & $X_{12} $ &$= t_F + t_I$ & $t_J $ &$= k_3t_h - k_0t_k$\\ 
+$t_K $ &$= k_7t_i - k_6t_j$ & $t_L $ &$= k_6t_i + k_7t_j$ & $t_M $ &$= k_0t_h + k_3t_k$ & $t_N $ &$= k_2t_2 - k_5t_x$\\ 
+$t_O $ &$= t_w - t_N$ & $t_P $ &$= t_w + t_N$ & $t_Q $ &$= t_3 - k_4t_t$ & $t_R $ &$= k_8(t_r - t_s)$\\ 
+$t_S $ &$= t_Q - t_R$ & $t_T $ &$= t_R + t_Q$ & $t_U $ &$= t_S - t_J$ & $t_V $ &$= i(t_K - t_O)$\\ 
+$X_8 $ &$= t_U - t_V$ & $X_7 $ &$= t_U + t_V$ & $t_W $ &$= t_T - t_M$ & $t_X $ &$= i(t_L + t_P)$\\ 
+$X_{11} $ &$= t_W - t_X$ & $X_4 $ &$= t_W + t_X$ & $t_Y $ &$= t_S + t_J$ & $t_Z $ &$= i(t_K + t_O)$\\ 
+$X_{13} $ &$= t_Y - t_Z$ & $X_2 $ &$= t_Y + t_Z$ & $t_{10} $ &$= t_T + t_M$ & $t_{11} $ &$= i(t_P - t_L)$\\ 
+$X_{14} $ &\multicolumn{5}{l|}{$= t_{10} - t_{11}$} & $X_1 $ &$= t_{10} + t_{11}$\\ 
+\bottomrule\end{tabular}

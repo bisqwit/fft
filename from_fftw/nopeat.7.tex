@@ -1,0 +1,9 @@
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{10}{|c|}{FFT, $N=7$} \\
+$k_0 $ &$= \cos\left(\sfrac{\pi}{7}\right)$ & $k_1 $ &$= \cos\left(\sfrac{3\pi}{7}\right)$ & $k_2 $ &$= \cos\left(\sfrac{2\pi}{7}\right)$ & $k_3 $ &$= \sin\left(\sfrac{5\pi}{7}\right)$ & $k_4 $ &$= \sin\left(\sfrac{3\pi}{7}\right)$\\ 
+$k_5 $ &$= \sin\left(\sfrac{\pi}{7}\right)$ & $t_0 $ &$= x_3 + x_4$ & $t_1 $ &$= x_4 - x_3$ & $t_2 $ &$= x_1 + x_6$ & $t_3 $ &$= x_6 - x_1$\\ 
+$t_4 $ &$= x_2 + x_5$ & $t_5 $ &$= x_5 - x_2$ & $X_0 $ &\multicolumn{5}{l|}{$= x_0 + t_2 + t_4 + t_0$}\\ 
+$t_6 $ &\multicolumn{3}{l|}{$= i(k_4t_1 - k_3t_5 + k_5t_3)$} & $t_7 $ &\multicolumn{3}{l|}{$= x_0 - k_0t_2 - k_1t_0 + k_2t_4$} & $X_4 $ &$= t_7 - t_6$\\ 
+$X_3 $ &$= t_7 + t_6$ & $t_8 $ &\multicolumn{3}{l|}{$= i(k_4t_3 - k_5t_5 - k_3t_1)$} & $t_9 $ &\multicolumn{3}{l|}{$= x_0 - k_1t_2 - k_0t_4 + k_2t_0$}\\ 
+$X_5 $ &$= t_9 - t_8$ & $X_2 $ &$= t_9 + t_8$ & $t_a $ &\multicolumn{5}{l|}{$= i(k_5t_1 + k_4t_5 + k_3t_3)$}\\ 
+$t_b $ &\multicolumn{5}{l|}{$= x_0 - k_1t_4 - k_0t_0 + k_2t_2$} & $X_6 $ &$= t_b - t_a$ & $X_1 $ &$= t_b + t_a$\\ 
+\bottomrule\end{tabular}

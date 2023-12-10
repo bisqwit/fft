@@ -1,0 +1,32 @@
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{4}{|c|}{FFT, $N=9$} \\
+$k_0 $ &$= \sin\left(\sfrac{\pi}{9}\right)$ & $k_1 $ &$= \cos\left(\sfrac{\pi}{9}\right)$\\ 
+$k_2 $ &$= \sin\left(\sfrac{2\pi}{9}\right)$ & $k_3 $ &$= \cos\left(\sfrac{2\pi}{9}\right)$\\ 
+$k_4 $ &$= \sin\left(\sfrac{4\pi}{9}\right)$ & $k_5 $ &$= \cos\left(\sfrac{4\pi}{9}\right)$\\ 
+$k_6 $ &$= \sfrac{1}{2}$ & $k_7 $ &$= \sfrac{\sqrt{3}}{2}$\\ 
+$k_8 $ &\multicolumn{3}{l|}{$= \sin\left(\sfrac{\pi}{3}\right)\sin\left(\sfrac{4\pi}{9}\right)$}\\ 
+$k_9 $ &\multicolumn{3}{l|}{$= \sin\left(\sfrac{\pi}{3}\right)\cos\left(\sfrac{4\pi}{9}\right)$}\\ 
+$k_a $ &\multicolumn{3}{l|}{$= \sin\left(\sfrac{\pi}{9}\right)\sin\left(\sfrac{\pi}{3}\right)$}\\ 
+$k_b $ &\multicolumn{3}{l|}{$= \cos\left(\sfrac{\pi}{9}\right)\sin\left(\sfrac{\pi}{3}\right)$}\\ 
+$k_c $ &\multicolumn{3}{l|}{$= \sin\left(\sfrac{2\pi}{9}\right)\sin\left(\sfrac{\pi}{3}\right)$}\\ 
+$k_d $ &\multicolumn{3}{l|}{$= \cos\left(\sfrac{2\pi}{9}\right)\sin\left(\sfrac{\pi}{3}\right)$}\\ 
+$t_0 $ &$= x_3 + x_6$ & $t_1 $ &$= x_0 + t_0$\\ 
+$t_2 $ &$= k_7(x_6 - x_3)$ & $t_3 $ &$= x_0 - k_6t_0$\\ 
+$t_4 $ &$= x_5 + x_8$ & $t_5 $ &$= x_8 - x_5$\\ 
+$t_6 $ &$= x_2 + t_4$ & $t_7 $ &$= x_2 - k_6t_4$\\ 
+$t_8 $ &$= k_8t_5 + k_5t_7$ & $t_9 $ &$= k_9t_5 - k_4t_7$\\ 
+$t_a $ &$= x_4 + x_7$ & $t_b $ &$= x_7 - x_4$\\ 
+$t_c $ &$= x_1 + t_a$ & $t_d $ &$= x_1 - k_6t_a$\\ 
+$t_e $ &$= k_ct_b + k_3t_d$ & $t_f $ &$= k_dt_b - k_2t_d$\\ 
+$t_g $ &$= ik_7(t_6 - t_c)$ & $t_h $ &$= t_c + t_6$\\ 
+$t_i $ &$= t_1 - k_6t_h$ & $X_0 $ &$= t_1 + t_h$\\ 
+$X_3 $ &$= t_i + t_g$ & $X_6 $ &$= t_i - t_g$\\ 
+$t_j $ &\multicolumn{3}{l|}{$= t_3 - k_8t_b - k_1t_7 - k_at_5 + k_5t_d$}\\ 
+$t_k $ &\multicolumn{3}{l|}{$= i(k_bt_5 - k_4t_d - k_9t_b - k_0t_7 - t_2)$}\\ 
+$X_7 $ &$= t_j - t_k$ & $X_2 $ &$= t_j + t_k$\\ 
+$t_l $ &$= t_e + t_8$ & $t_m $ &$= t_3 + t_l$\\ 
+$t_n $ &\multicolumn{3}{l|}{$= t_3 - k_6t_l + k_7(t_f - t_9)$}\\ 
+$t_o $ &$= t_f + t_9$ & $t_p $ &$= i(t_2 + t_o)$\\ 
+$t_q $ &\multicolumn{3}{l|}{$= i(t_2 + k_7(t_8 - t_e) - k_6t_o)$}\\ 
+$X_8 $ &$= t_m - t_p$ & $X_4 $ &$= t_n + t_q$\\ 
+$X_1 $ &$= t_p + t_m$ & $X_5 $ &$= t_n - t_q$\\ 
+\bottomrule\end{tabular}

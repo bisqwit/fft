@@ -1,0 +1,40 @@
+% Discovered: 0.1741386011521358911924295398421236313879489898681640625 = \frac{4}{3}\left(\sin\left(\sfrac{\pi}{13}\right)\sin\left(\sfrac{9\pi}{13}\right)\sin\left(\sfrac{10\pi}{13}\right)\right)
+% Discovered: 0.57514072947400307622700665888260118663311004638671875 = \frac{4}{3}\left(\sin\left(\sfrac{2\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\sin\left(\sfrac{8\pi}{13}\right)\right)
+% Discovered: 0.50353703286376660930301341068116016685962677001953125 = 2\sin\left(\sfrac{2\pi}{13}\right)\sin\left(\sfrac{3\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\sin\left(\sfrac{9\pi}{13}\right)
+% Discovered: 0.2582603903117448584936255429056473076343536376953125 = \frac{8}{3}\left(\cos\left(\sfrac{\pi}{13}\right)\sin\left(\sfrac{4\pi}{13}\right)\cos\left(\sfrac{5\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\cos\left(\sfrac{8\pi}{13}\right)\cos\left(\sfrac{12\pi}{13}\right)\right)
+% Discovered: 0.38739058546761728774043831435847096145153045654296875 = 4\cos\left(\sfrac{\pi}{13}\right)\sin\left(\sfrac{4\pi}{13}\right)\cos\left(\sfrac{5\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\cos\left(\sfrac{8\pi}{13}\right)\cos\left(\sfrac{12\pi}{13}\right)
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{8}{|c|}{FFT, $N=13$} \\
+$k_0 $ &\multicolumn{3}{l|}{$= \frac{4}{3}\left(\sin\left(\sfrac{\pi}{13}\right)\sin\left(\sfrac{9\pi}{13}\right)\sin\left(\sfrac{10\pi}{13}\right)\right)$} & $k_1 $ &$= 2$ & $k_2 $ &$= \sfrac{1}{2}$\\ 
+$k_3 $ &\multicolumn{3}{l|}{$= \frac{4}{3}\left(\sin\left(\sfrac{2\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\sin\left(\sfrac{8\pi}{13}\right)\right)$} & $k_4 $ &$= \sqrt{3}$ & $k_5 $ &$= \sfrac{1}{12}$\\ 
+$k_6 $ &\multicolumn{5}{l|}{$= \sin\left(\sfrac{2\pi}{13}\right)\sin\left(\sfrac{3\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\sin\left(\sfrac{9\pi}{13}\right)$} & $k_7 $ &$= \sfrac{\sqrt{3}}{2}$\\ 
+$k_8 $ &\multicolumn{5}{l|}{$= 2\sin\left(\sfrac{2\pi}{13}\right)\sin\left(\sfrac{3\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\sin\left(\sfrac{9\pi}{13}\right)$} & $k_9 $ &$= \sfrac{\sqrt{13}}{12}$\\ 
+$k_a $ &\multicolumn{7}{l|}{$= \frac{8}{3}\left(\cos\left(\sfrac{\pi}{13}\right)\sin\left(\sfrac{4\pi}{13}\right)\cos\left(\sfrac{5\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\cos\left(\sfrac{8\pi}{13}\right)\cos\left(\sfrac{12\pi}{13}\right)\right)$}\\ 
+$k_b $ &\multicolumn{7}{l|}{$= 4\cos\left(\sfrac{\pi}{13}\right)\sin\left(\sfrac{4\pi}{13}\right)\cos\left(\sfrac{5\pi}{13}\right)\sin\left(\sfrac{6\pi}{13}\right)\cos\left(\sfrac{8\pi}{13}\right)\cos\left(\sfrac{12\pi}{13}\right)$}\\ 
+$k_c $ &\multicolumn{3}{l|}{$= {}_{0{,}075902986037193864721217551050}$} & $k_d $ &\multicolumn{3}{l|}{$= {}_{0{,}132983124607418651264012510183}$}\\ 
+$k_e $ &\multicolumn{3}{l|}{$= {}_{0{,}300238635966332656490607178057}$} & $k_f $ &\multicolumn{3}{l|}{$= {}_{0{,}011599105605768289875556753543}$}\\ 
+$k_g $ &\multicolumn{3}{l|}{$= {}_{0{,}156891391051584616622704970723}$} & $k_h $ &\multicolumn{3}{l|}{$= {}_{0{,}256247671582936598078106271714}$}\\ 
+$k_i $ &\multicolumn{3}{l|}{$= {}_{0{,}113854479055790797081826326576}$} & $k_j $ &\multicolumn{3}{l|}{$= {}_{0{,}265966249214837302528025020365}$}\\ 
+$t_0 $ &$= x_8 - x_5$ & $t_1 $ &$= x_8 + x_5$ & $t_2 $ &$= x_{10} + x_4$ & $t_3 $ &$= x_{12} + t_2$\\ 
+$t_4 $ &$= x_{10} - x_4$ & $t_5 $ &$= x_{12} - k_2t_2$ & $t_6 $ &$= x_9$ & $t_7 $ &$= x_3 + t_6$\\ 
+$t_8 $ &$= x_1 + t_7$ & $t_9 $ &$= x_3 - t_6$ & $t_a $ &$= x_1 - k_2t_7$ & $t_b $ &$= x_{11} - x_6$\\ 
+$t_c $ &$= x_{11} + x_6$ & $t_d $ &$= x_7 - x_2$ & $t_e $ &$= x_7 + x_2$ & $t_f $ &$= t_b + t_d$\\ 
+$t_g $ &$= t_c + t_e$ & $t_h $ &$= t_0 + t_f$ & $t_i $ &$= t_8 - t_3$ & $t_j $ &$= t_a - t_5$\\ 
+$t_k $ &$= k_7(t_c - t_e)$ & $t_l $ &$= t_j + t_k$ & $t_m $ &$= t_j - t_k$ & $t_n $ &$= t_8 + t_3$\\ 
+$t_o $ &$= t_1 + t_g$ & $t_p $ &$= k_9(t_n - t_o)$ & $t_q $ &$= t_n + t_o$ & $t_r $ &$= t_a + t_5$\\ 
+$t_s $ &$= t_1 - k_2t_g$ & $t_t $ &$= t_r - t_s$ & $t_u $ &$= t_r + t_s$ & $t_v $ &$= k_7(t_9 - t_4)$\\ 
+$t_w $ &$= t_0 - k_2t_f$ & $t_x $ &$= t_v - t_w$ & $t_y $ &$= t_v + t_w$ & $t_z $ &$= t_9 + t_4$\\ 
+$t_A $ &$= t_b - t_d$ & $t_B $ &$= t_z - t_A$ & $t_C $ &$= t_z + t_A$ & $X_0 $ &$= x_0 + t_q$\\ 
+$t_D $ &$= k_jt_t + k_bt_B$ & $t_E $ &$= k_it_C - k_8t_u$ & $t_F $ &$= t_D - t_E$ & $t_G $ &$= t_D + t_E$\\ 
+$t_H $ &$= k_0t_h + k_3t_i$ & $t_I $ &$= k_ht_m - k_gt_y$ & $t_J $ &$= k_et_l + k_ft_x$ & $t_K $ &$= t_I - t_J$\\ 
+$t_L $ &$= t_H + t_K$ & $t_M $ &$= k_4(t_I + t_J)$ & $t_N $ &$= k_3t_h - k_0t_i$ & $t_O $ &$= k_ft_l - k_et_x$\\ 
+$t_P $ &$= k_gt_m + k_ht_y$ & $t_Q $ &$= t_O - t_P$ & $t_R $ &$= k_4(t_P + t_O)$ & $t_S $ &$= t_N - t_Q$\\ 
+$t_T $ &$= k_at_t - k_dt_B$ & $t_U $ &$= t_p - t_T$ & $t_V $ &$= k_ct_u + k_6t_C$ & $t_W $ &$= x_0 - k_5t_q$\\ 
+$t_X $ &$= t_W - t_V$ & $t_Y $ &$= t_p + k_1t_T$ & $t_Z $ &$= t_U + t_X$ & $t_{10} $ &$= t_W + k_1t_V$\\ 
+$t_{11} $ &$= t_X - t_U$ & $t_{12} $ &$= i(t_N + k_1t_Q)$ & $t_{13} $ &$= t_Y + t_{10}$ & $X_1 $ &$= t_{12} + t_{13}$\\ 
+$X_{12} $ &$= t_{13} - t_{12}$ & $t_{14} $ &$= i(k_1t_K - t_H)$ & $t_{15} $ &$= t_{10} - t_Y$ & $X_5 $ &$= t_{14} + t_{15}$\\ 
+$X_8 $ &$= t_{15} - t_{14}$ & $t_{16} $ &$= t_G + t_Z$ & $t_{17} $ &$= i(t_S + t_M)$ & $X_4 $ &$= t_{16} - t_{17}$\\ 
+$X_9 $ &$= t_{17} + t_{16}$ & $t_{18} $ &$= i(t_S - t_M)$ & $t_{19} $ &$= t_Z - t_G$ & $X_3 $ &$= t_{18} + t_{19}$\\ 
+$X_{10} $ &$= t_{19} - t_{18}$ & $t_{1a} $ &$= i(t_R - t_L)$ & $t_{1b} $ &$= t_{11} - t_F$ & $X_6 $ &$= t_{1a} + t_{1b}$\\ 
+$X_7 $ &$= t_{1b} - t_{1a}$ & $t_{1c} $ &$= t_F + t_{11}$ & $t_{1d} $ &$= i(t_R + t_L)$ & $X_2 $ &$= t_{1c} - t_{1d}$\\ 
+$X_{11} $ &\multicolumn{7}{l|}{$= t_{1d} + t_{1c}$}\\ 
+\bottomrule\end{tabular}

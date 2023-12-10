@@ -1,0 +1,18 @@
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{10}{|c|}{FFT, $N=14$} \\
+$k_0 $ &$= \cos\left(\sfrac{\pi}{7}\right)$ & $k_1 $ &$= \cos\left(\sfrac{3\pi}{7}\right)$ & $k_2 $ &$= \cos\left(\sfrac{2\pi}{7}\right)$ & $k_3 $ &$= \sin\left(\sfrac{5\pi}{7}\right)$ & $k_4 $ &$= \sin\left(\sfrac{3\pi}{7}\right)$\\ 
+$k_5 $ &$= \sin\left(\sfrac{\pi}{7}\right)$ & $t_0 $ &$= x_0 - x_7$ & $t_1 $ &$= x_0 + x_7$ & $t_2 $ &$= x_6 - x_{13}$ & $t_3 $ &$= x_6 + x_{13}$\\ 
+$t_4 $ &$= x_8 - x_1$ & $t_5 $ &$= x_8 + x_1$ & $t_6 $ &$= t_2 + t_4$ & $t_7 $ &$= t_3 - t_5$ & $t_8 $ &$= t_4 - t_2$\\ 
+$t_9 $ &$= t_3 + t_5$ & $t_a $ &$= x_9$ & $t_b $ &$= x_2 - t_a$ & $t_c $ &$= x_2 + t_a$ & $t_d $ &$= x_{12} - x_5$\\ 
+$t_e $ &$= x_{12} + x_5$ & $t_f $ &$= t_b + t_d$ & $t_g $ &$= t_e - t_c$ & $t_h $ &$= t_d - t_b$ & $t_i $ &$= t_c + t_e$\\ 
+$t_j $ &$= x_4 - x_{11}$ & $t_k $ &$= x_4 + x_{11}$ & $t_l $ &$= x_{10} - x_3$ & $t_m $ &$= x_{10} + x_3$ & $t_n $ &$= t_j + t_l$\\ 
+$t_o $ &$= t_k - t_m$ & $t_p $ &$= t_l - t_j$ & $t_q $ &$= t_k + t_m$ & $X_7 $ &\multicolumn{3}{l|}{$= t_0 + t_f + t_n + t_6$}\\ 
+$X_0 $ &\multicolumn{5}{l|}{$= t_1 + t_i + t_q + t_9$} & $t_r $ &\multicolumn{3}{l|}{$= i(k_4t_h - k_5t_p - k_3t_8)$}\\ 
+$t_s $ &\multicolumn{5}{l|}{$= t_0 - k_1t_f - k_0t_n + k_2t_6$} & $X_5 $ &$= t_s - t_r$ & $X_9 $ &$= t_s + t_r$\\ 
+$t_t $ &\multicolumn{3}{l|}{$= i(k_3t_7 + k_5t_o + k_4t_g)$} & $t_u $ &\multicolumn{3}{l|}{$= t_1 - k_1t_i - k_0t_q + k_2t_9$} & $X_2 $ &$= t_t + t_u$\\ 
+$X_{12} $ &$= t_u - t_t$ & $t_v $ &\multicolumn{3}{l|}{$= i(k_5t_8 + k_4t_p + k_3t_h)$} & $t_w $ &\multicolumn{3}{l|}{$= t_0 - k_1t_n - k_0t_6 + k_2t_f$}\\ 
+$X_{13} $ &$= t_w - t_v$ & $X_1 $ &$= t_w + t_v$ & $t_x $ &\multicolumn{5}{l|}{$= i(k_3t_g - k_4t_o - k_5t_7)$}\\ 
+$t_y $ &\multicolumn{5}{l|}{$= t_1 - k_1t_q - k_0t_9 + k_2t_i$} & $X_6 $ &$= t_y - t_x$ & $X_8 $ &$= t_x + t_y$\\ 
+$t_z $ &\multicolumn{3}{l|}{$= i(k_3t_o - k_4t_7 + k_5t_g)$} & $t_A $ &\multicolumn{3}{l|}{$= t_1 - k_0t_i - k_1t_9 + k_2t_q$} & $X_4 $ &$= t_A - t_z$\\ 
+$X_{10} $ &$= t_z + t_A$ & $t_B $ &\multicolumn{3}{l|}{$= i(k_4t_8 - k_3t_p + k_5t_h)$} & $t_C $ &\multicolumn{3}{l|}{$= t_0 - k_0t_f - k_1t_6 + k_2t_n$}\\ 
+$X_{11} $ &$= t_C - t_B$ & $X_3 $ &\multicolumn{7}{l|}{$= t_C + t_B$}\\ 
+\bottomrule\end{tabular}

@@ -1,0 +1,13 @@
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{10}{|c|}{FFT, $N=10$} \\
+$k_0 $ &$= \sfrac{1}{4}$ & $k_1 $ &$= \sfrac{\sqrt{5}}{4}$ & $k_2 $ &$= \sin\left(\sfrac{\pi}{5}\right)$ & $k_3 $ &$= \sin\left(\sfrac{2\pi}{5}\right)$ & $t_0 $ &$= x_0 - x_5$\\ 
+$t_1 $ &$= x_0 + x_5$ & $t_2 $ &$= x_2 - x_7$ & $t_3 $ &$= x_2 + x_7$ & $t_4 $ &$= x_6 - x_1$ & $t_5 $ &$= x_6 + x_1$\\ 
+$t_6 $ &$= x_8 - x_3$ & $t_7 $ &$= x_8 + x_3$ & $t_8 $ &$= x_9$ & $t_9 $ &$= x_4 - t_8$ & $t_a $ &$= x_4 + t_8$\\ 
+$t_b $ &$= t_2 - t_6$ & $t_c $ &$= t_9 - t_4$ & $t_d $ &$= t_3 - t_7$ & $t_e $ &$= t_a - t_5$ & $t_f $ &$= t_3 + t_7$\\ 
+$t_g $ &$= t_a + t_5$ & $t_h $ &$= t_f + t_g$ & $t_i $ &$= t_2 + t_6$ & $t_j $ &$= t_9 + t_4$ & $t_k $ &$= t_i + t_j$\\ 
+$X_5 $ &$= t_0 + t_k$ & $X_0 $ &$= t_1 + t_h$ & $t_l $ &\multicolumn{5}{l|}{$= i(k_2t_c + k_3t_b)$}\\ 
+$t_m $ &\multicolumn{3}{l|}{$= i(k_3t_c - k_2t_b)$} & $t_n $ &$= k_1(t_i - t_j)$ & $t_o $ &$= t_0 - k_0t_k$ & $t_p $ &$= t_n + t_o$\\ 
+$t_q $ &$= t_o - t_n$ & $X_1 $ &$= t_p - t_l$ & $X_7 $ &$= t_m + t_q$ & $X_9 $ &$= t_l + t_p$ & $X_3 $ &$= t_q - t_m$\\ 
+$t_r $ &\multicolumn{3}{l|}{$= i(k_3t_e - k_2t_d)$} & $t_s $ &\multicolumn{3}{l|}{$= i(k_2t_e + k_3t_d)$} & $t_t $ &$= t_1 - k_0t_h$\\ 
+$t_u $ &$= k_1(t_f - t_g)$ & $t_v $ &$= t_t - t_u$ & $t_w $ &$= t_u + t_t$ & $X_2 $ &$= t_r + t_v$ & $X_6 $ &$= t_w - t_s$\\ 
+$X_8 $ &$= t_v - t_r$ & $X_4 $ &\multicolumn{7}{l|}{$= t_s + t_w$}\\ 
+\bottomrule\end{tabular}

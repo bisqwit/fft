@@ -1,0 +1,15 @@
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{8}{|c|}{FFT, $N=12$} \\
+$k_0 $ &$= \sfrac{1}{2}$ & $k_1 $ &$= \sfrac{\sqrt{3}}{2}$ & $t_0 $ &$= x_4 + x_8$ & $t_1 $ &$= x_8 - x_4$\\ 
+$t_2 $ &$= x_{10} + x_2$ & $t_3 $ &$= x_2 - x_{10}$ & $t_4 $ &$= x_0 + t_0$ & $t_5 $ &$= x_6 + t_2$\\ 
+$t_6 $ &$= t_1 + t_3$ & $t_7 $ &$= k_1(t_1 - t_3)$ & $t_8 $ &$= x_6 - k_0t_2$ & $t_9 $ &$= x_0 - k_0t_0$\\ 
+$t_a $ &$= x_9$ & $t_b $ &$= x_7 + x_{11}$ & $t_c $ &$= x_{11} - x_7$ & $t_d $ &$= x_1 + x_5$\\ 
+$t_e $ &$= x_5 - x_1$ & $t_f $ &$= x_3 + t_b$ & $t_g $ &$= t_a + t_d$ & $t_h $ &$= t_c + t_e$\\ 
+$t_i $ &$= t_a - k_0t_d$ & $t_j $ &$= x_3 - k_0t_b$ & $t_k $ &$= k_1(t_c - t_e)$ & $t_l $ &$= t_4 - t_5$\\ 
+$t_m $ &$= i(t_f - t_g)$ & $X_9 $ &$= t_l - t_m$ & $X_3 $ &$= t_l + t_m$ & $t_n $ &$= t_4 + t_5$\\ 
+$t_o $ &$= t_f + t_g$ & $X_6 $ &$= t_n - t_o$ & $X_0 $ &$= t_n + t_o$ & $t_p $ &$= t_9 - t_8$\\ 
+$t_q $ &$= t_p - t_k$ & $t_r $ &$= t_p + t_k$ & $t_s $ &$= t_j - t_i$ & $t_t $ &$= i(t_7 + t_s)$\\ 
+$t_u $ &$= i(t_7 - t_s)$ & $X_5 $ &$= t_q - t_t$ & $X_{11} $ &$= t_r - t_u$ & $X_7 $ &$= t_t + t_q$\\ 
+$X_1 $ &$= t_u + t_r$ & $t_v $ &$= ik_1(t_h - t_6)$ & $t_w $ &$= ik_1(t_6 + t_h)$ & $t_x $ &$= t_9 + t_8$\\ 
+$t_y $ &$= t_j + t_i$ & $t_z $ &$= t_x - t_y$ & $t_A $ &$= t_x + t_y$ & $X_{10} $ &$= t_z - t_v$\\ 
+$X_4 $ &\multicolumn{3}{l|}{$= t_A + t_w$} & $X_2 $ &$= t_z + t_v$ & $X_8 $ &$= t_A - t_w$\\ 
+\bottomrule\end{tabular}

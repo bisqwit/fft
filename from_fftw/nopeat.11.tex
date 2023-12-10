@@ -1,0 +1,17 @@
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{10}{|c|}{FFT, $N=11$} \\
+$k_0 $ &$= \cos\left(\sfrac{\pi}{11}\right)$ & $k_1 $ &$= \cos\left(\sfrac{3\pi}{11}\right)$ & $k_2 $ &$= \cos\left(\sfrac{4\pi}{11}\right)$ & $k_3 $ &$= \cos\left(\sfrac{5\pi}{11}\right)$ & $k_4 $ &$= \cos\left(\sfrac{2\pi}{11}\right)$\\ 
+$k_5 $ &$= \sin\left(\sfrac{\pi}{11}\right)$ & $k_6 $ &$= \sin\left(\sfrac{3\pi}{11}\right)$ & $k_7 $ &$= \sin\left(\sfrac{4\pi}{11}\right)$ & $k_8 $ &$= \sin\left(\sfrac{5\pi}{11}\right)$ & $k_9 $ &$= \sin\left(\sfrac{9\pi}{11}\right)$\\ 
+$t_0 $ &$= x_1 + x_{10}$ & $t_1 $ &$= x_{10} - x_1$ & $t_2 $ &$= x_5 + x_6$ & $t_3 $ &$= x_6 - x_5$ & $t_4 $ &$= x_4 + x_7$\\ 
+$t_5 $ &$= x_7 - x_4$ & $t_6 $ &$= x_3 + x_8$ & $t_7 $ &$= x_8 - x_3$ & $t_8 $ &$= x_9$ & $t_9 $ &$= x_2 + t_8$\\ 
+$t_a $ &$= t_8 - x_2$ & $X_0 $ &\multicolumn{7}{l|}{$= x_0 + t_0 + t_9 + t_6 + t_4 + t_2$}\\ 
+$t_b $ &\multicolumn{9}{l|}{$= i(k_5t_5 - k_8t_a - k_7t_3 + k_9t_7 + k_6t_1)$}\\ 
+$t_c $ &\multicolumn{5}{l|}{$= x_0 - k_1t_0 - k_3t_9 - k_0t_4 + k_2t_2 + k_4t_6$} & $X_7 $ &$= t_c - t_b$ & $X_4 $ &$= t_c + t_b$\\ 
+$t_d $ &\multicolumn{9}{l|}{$= i(k_8t_3 - k_9t_a - k_7t_5 + k_6t_7 + k_5t_1)$}\\ 
+$t_e $ &\multicolumn{5}{l|}{$= x_0 - k_0t_0 - k_1t_6 - k_3t_2 + k_2t_4 + k_4t_9$} & $X_6 $ &$= t_e - t_d$ & $X_5 $ &$= t_e + t_d$\\ 
+$t_f $ &\multicolumn{9}{l|}{$= i(k_6t_3 - k_5t_a - k_7t_7 + k_9t_5 + k_8t_1)$}\\ 
+$t_g $ &\multicolumn{5}{l|}{$= x_0 - k_3t_0 - k_0t_9 - k_1t_2 + k_4t_4 + k_2t_6$} & $X_8 $ &$= t_g - t_f$ & $X_3 $ &$= t_g + t_f$\\ 
+$t_h $ &\multicolumn{9}{l|}{$= i(k_5t_3 + k_6t_5 + k_8t_7 + k_7t_a + k_9t_1)$}\\ 
+$t_i $ &\multicolumn{5}{l|}{$= x_0 - k_3t_6 - k_1t_4 - k_0t_2 + k_2t_9 + k_4t_0$} & $X_{10} $ &$= t_i - t_h$ & $X_1 $ &$= t_i + t_h$\\ 
+$t_j $ &\multicolumn{9}{l|}{$= i(k_6t_a - k_5t_7 - k_8t_5 - k_9t_3 + k_7t_1)$}\\ 
+$t_k $ &\multicolumn{5}{l|}{$= x_0 - k_1t_9 - k_0t_6 - k_3t_4 + k_4t_2 + k_2t_0$} & $X_9 $ &$= t_k - t_j$ & $X_2 $ &$= t_k + t_j$\\ 
+\bottomrule\end{tabular}

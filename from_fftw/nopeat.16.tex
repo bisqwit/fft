@@ -1,0 +1,18 @@
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{10}{|c|}{FFT, $N=16$} \\
+$k_0 $ &$= \cos\left(\sfrac{\pi}{8}\right)$ & $k_1 $ &$= \sin\left(\sfrac{\pi}{8}\right)$ & $k_2 $ &$= \sfrac{\sqrt{2}}{2}$ & $t_0 $ &$= x_4 + x_{12}$ & $t_1 $ &$= x_0 + x_8$\\ 
+$t_2 $ &$= x_4 - x_{12}$ & $t_3 $ &$= t_1 + t_0$ & $t_4 $ &$= x_0 - x_8$ & $t_5 $ &$= t_1 - t_0$ & $t_6 $ &$= x_{14} - x_6$\\ 
+$t_7 $ &$= x_{14} + x_6$ & $t_8 $ &$= x_2 - x_{10}$ & $t_9 $ &$= x_2 + x_{10}$ & $t_a $ &$= k_2(t_6 - t_8)$ & $t_b $ &$= t_9 + t_7$\\ 
+$t_c $ &$= k_2(t_8 + t_6)$ & $t_d $ &$= t_7 - t_9$ & $t_e $ &$= x_{15} - x_7$ & $t_f $ &$= x_{15} + x_7$ & $t_g $ &$= x_3 - x_{11}$\\ 
+$t_h $ &$= x_3 + x_{11}$ & $t_i $ &$= k_1t_e - k_0t_g$ & $t_j $ &$= t_f + t_h$ & $t_k $ &$= k_1t_g + k_0t_e$ & $t_l $ &$= t_f - t_h$\\ 
+$t_m $ &$= x_9$ & $t_n $ &$= x_1 - t_m$ & $t_o $ &$= x_1 + t_m$ & $t_p $ &$= x_5 - x_{13}$ & $t_q $ &$= x_5 + x_{13}$\\ 
+$t_r $ &$= k_0t_p + k_1t_n$ & $t_s $ &$= t_o + t_q$ & $t_t $ &$= k_0t_n - k_1t_p$ & $t_u $ &$= t_o - t_q$ & $t_v $ &$= t_3 + t_b$\\ 
+$t_w $ &$= t_s + t_j$ & $X_8 $ &$= t_v - t_w$ & $X_0 $ &$= t_v + t_w$ & $t_x $ &$= t_3 - t_b$ & $t_y $ &$= i(t_j - t_s)$\\ 
+$X_{12} $ &$= t_x - t_y$ & $X_4 $ &$= t_x + t_y$ & $t_z $ &$= k_2(t_u + t_l)$ & $t_A $ &$= t_5 + t_z$ & $t_B $ &$= t_5 - t_z$\\ 
+$t_C $ &$= k_2(t_l - t_u)$ & $t_D $ &$= i(t_d + t_C)$ & $t_E $ &$= i(t_C - t_d)$ & $X_{14} $ &$= t_A - t_D$ & $X_6 $ &$= t_B + t_E$\\ 
+$X_2 $ &$= t_A + t_D$ & $X_{10} $ &$= t_B - t_E$ & $t_F $ &$= t_i - t_r$ & $t_G $ &$= t_a - t_2$ & $t_H $ &$= i(t_F - t_G)$\\ 
+$t_I $ &$= i(t_G + t_F)$ & $t_J $ &$= t_4 + t_c$ & $t_K $ &$= t_t + t_k$ & $t_L $ &$= t_J - t_K$ & $t_M $ &$= t_J + t_K$\\ 
+$X_7 $ &$= t_H + t_L$ & $X_{15} $ &$= t_M - t_I$ & $X_9 $ &$= t_L - t_H$ & $X_1 $ &$= t_I + t_M$ & $t_N $ &$= t_4 - t_c$\\ 
+$t_O $ &$= t_r + t_i$ & $t_P $ &$= t_N + t_O$ & $t_Q $ &$= t_N - t_O$ & $t_R $ &$= t_2 + t_a$ & $t_S $ &$= t_k - t_t$\\ 
+$t_T $ &$= i(t_R + t_S)$ & $t_U $ &$= i(t_S - t_R)$ & $X_{13} $ &$= t_P - t_T$ & $X_5 $ &$= t_Q + t_U$ & $X_3 $ &$= t_P + t_T$\\ 
+$X_{11} $ &\multicolumn{9}{l|}{$= t_Q - t_U$}\\ 
+\bottomrule\end{tabular}

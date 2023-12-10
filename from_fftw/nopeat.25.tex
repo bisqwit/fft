@@ -1,0 +1,74 @@
+% Discovered: 1.9842294026289557518083483955706469714641571044921875 = 2\cos\left(\sfrac{\pi}{25}\right)
+% Discovered: 1.93716632225726215210670488886535167694091796875 = 2\cos\left(\sfrac{2\pi}{25}\right)
+% Discovered: 1.7526133600877271678797342246980406343936920166015625 = 2\cos\left(\sfrac{4\pi}{25}\right)
+% Discovered: 1.457937254842823104894478092319332063198089599609375 = 2\cos\left(\sfrac{6\pi}{25}\right)
+% Discovered: 1.27484797949737949096515876590274274349212646484375 = 2\cos\left(\sfrac{7\pi}{25}\right)
+% Discovered: 0.2506664671286085166457269224338233470916748046875 = 2\sin\left(\sfrac{\pi}{25}\right)
+% Discovered: 0.49737977432970958968638797159655950963497161865234375 = 2\sin\left(\sfrac{2\pi}{25}\right)
+% Discovered: 0.96350734820343053588231896355864591896533966064453125 = 2\sin\left(\sfrac{4\pi}{25}\right)
+% Discovered: 1.36909421185737745219057615031488239765167236328125 = 2\sin\left(\sfrac{6\pi}{25}\right)
+% Discovered: 1.541026485551578506516534616821445524692535400390625 = 2\sin\left(\sfrac{7\pi}{25}\right)
+% Discovered: 1.0716535899579933133196618655347265303134918212890625 = 2\cos\left(\sfrac{8\pi}{25}\right)
+% Discovered: 0.851558583130145319017856309073977172374725341796875 = 2\cos\left(\sfrac{9\pi}{25}\right)
+% Discovered: 0.1255810390586267477619486498952028341591358184814453125 = 2\cos\left(\sfrac{12\pi}{25}\right)
+% Discovered: 1.688655851004030150619428241043351590633392333984375 = 2\sin\left(\sfrac{8\pi}{25}\right)
+% Discovered: 1.80965410493203915365256762015633285045623779296875 = 2\sin\left(\sfrac{9\pi}{25}\right)
+% Discovered: 1.996053456856543117936553244362585246562957763671875 = 2\sin\left(\sfrac{12\pi}{25}\right)
+\begin{tabular}{|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|p{4.3pt}l|}\toprule \multicolumn{10}{|c|}{FFT, $N=25$} \\
+$k_0 $ &$= \cos\left(\sfrac{\pi}{5}\right)$ & $k_1 $ &$= \cos\left(\sfrac{2\pi}{5}\right)$ & $k_2 $ &$= \cos\left(\sfrac{\pi}{25}\right)$ & $k_3 $ &$= \cos\left(\sfrac{2\pi}{25}\right)$ & $k_4 $ &$= \cos\left(\sfrac{4\pi}{25}\right)$\\ 
+$k_5 $ &$= \sin\left(\sfrac{\pi}{5}\right)$ & $k_6 $ &$= \sin\left(\sfrac{2\pi}{5}\right)$ & $k_7 $ &$= \sin\left(\sfrac{\pi}{25}\right)$ & $k_8 $ &$= \sin\left(\sfrac{2\pi}{25}\right)$ & $k_9 $ &$= \sin\left(\sfrac{4\pi}{25}\right)$\\ 
+$k_a $ &$= \cos\left(\sfrac{6\pi}{25}\right)$ & $k_b $ &$= \cos\left(\sfrac{7\pi}{25}\right)$ & $k_c $ &$= \cos\left(\sfrac{8\pi}{25}\right)$ & $k_d $ &$= \cos\left(\sfrac{9\pi}{25}\right)$ & $k_e $ &$= \cos\left(\sfrac{12\pi}{25}\right)$\\ 
+$k_f $ &$= \sin\left(\sfrac{6\pi}{25}\right)$ & $k_g $ &$= \sin\left(\sfrac{7\pi}{25}\right)$ & $k_h $ &$= \sin\left(\sfrac{8\pi}{25}\right)$ & $k_i $ &$= \sin\left(\sfrac{9\pi}{25}\right)$ & $k_j $ &$= \sin\left(\sfrac{12\pi}{25}\right)$\\ 
+$k_k $ &$= 2\cos\left(\sfrac{\pi}{25}\right)$ & $k_l $ &$= 2\cos\left(\sfrac{2\pi}{25}\right)$ & $k_m $ &$= 2\cos\left(\sfrac{4\pi}{25}\right)$ & $k_n $ &$= 2\cos\left(\sfrac{6\pi}{25}\right)$ & $k_o $ &$= 2\cos\left(\sfrac{7\pi}{25}\right)$\\ 
+$k_p $ &$= 2\sin\left(\sfrac{\pi}{25}\right)$ & $k_q $ &$= 2\sin\left(\sfrac{2\pi}{25}\right)$ & $k_r $ &$= 2\sin\left(\sfrac{4\pi}{25}\right)$ & $k_s $ &$= 2\sin\left(\sfrac{6\pi}{25}\right)$ & $k_t $ &$= 2\sin\left(\sfrac{7\pi}{25}\right)$\\ 
+$k_u $ &$= 2\cos\left(\sfrac{8\pi}{25}\right)$ & $k_v $ &$= 2\cos\left(\sfrac{9\pi}{25}\right)$ & $k_w $ &$= 2\cos\left(\sfrac{12\pi}{25}\right)$ & $k_x $ &\multicolumn{3}{l|}{$= \cos\left(\sfrac{3\pi}{5}\right)\sin\left(\sfrac{7\pi}{5}\right)$}\\ 
+$k_y $ &$= 2\sin\left(\sfrac{8\pi}{25}\right)$ & $k_z $ &$= 2\sin\left(\sfrac{9\pi}{25}\right)$ & $k_A $ &$= 2\sin\left(\sfrac{12\pi}{25}\right)$ & $k_B $ &\multicolumn{3}{l|}{$= \sin\left(\sfrac{\pi}{5}\right)\cos\left(\sfrac{9\pi}{5}\right)$}\\ 
+$k_C $ &$= \sfrac{1}{4}$ & $k_D $ &$= \sfrac{\sqrt{5}}{4}$ & $t_0 $ &$= x_{10} + x_{15}$ & $t_1 $ &$= x_{10} - x_{15}$ & $t_2 $ &$= x_5 + x_{20}$\\ 
+$t_3 $ &$= x_5 - x_{20}$ & $t_4 $ &$= k_D(t_2 - t_0)$ & $t_5 $ &$= k_5t_1 + k_6t_3$ & $t_6 $ &$= k_6t_1$ & $t_7 $ &$= t_6 - k_5t_3$\\ 
+$t_8 $ &$= t_2 + t_0$ & $t_9 $ &$= x_0 - k_Ct_8$ & $t_a $ &$= x_0 + t_8$ & $t_b $ &$= x_7 + x_{22}$ & $t_c $ &$= x_{12} + x_{17}$\\ 
+$t_d $ &$= k_D(t_b - t_c)$ & $t_e $ &$= x_{12} - x_{17}$ & $t_f $ &$= t_b + t_c$ & $t_g $ &$= x_7 - x_{22}$ & $t_h $ &$= x_8 + x_{23}$\\ 
+$t_i $ &$= x_{13} + x_{18}$ & $t_j $ &$= k_D(t_h - t_i)$ & $t_k $ &$= x_{13} - x_{18}$ & $t_l $ &$= t_h + t_i$ & $t_m $ &$= x_8 - x_{23}$\\ 
+$t_n $ &$= x_2 + t_f$ & $t_o $ &$= x_3 + t_l$ & $t_p $ &$= t_n + t_o$ & $t_q $ &$= k_xt_k + k_Bt_m$ & $t_r $ &$= k_Bt_k - k_xt_m$\\ 
+$t_s $ &$= x_3 - k_Ct_l$ & $t_t $ &$= t_j + t_s$ & $t_u $ &$= t_s - t_j$ & $t_v $ &$= k_at_t - k_st_q$ & $t_w $ &$= k_et_u + k_At_r$\\ 
+$t_x $ &$= k_ft_t + k_nt_q$ & $t_y $ &$= k_wt_r - k_jt_u$ & $t_z $ &$= k_xt_e + k_Bt_g$ & $t_A $ &$= k_Bt_e - k_xt_g$ & $t_B $ &$= x_2 - k_Ct_f$\\ 
+$t_C $ &$= t_d + t_B$ & $t_D $ &$= t_B - t_d$ & $t_E $ &$= k_4t_C - k_rt_z$ & $t_F $ &$= k_ct_D + k_yt_A$ & $t_G $ &$= k_9t_C + k_mt_z$\\ 
+$t_H $ &$= k_ut_A - k_ht_D$ & $t_I $ &$= x_6 + x_{21}$ & $t_J $ &$= x_{11} + x_{16}$ & $t_K $ &$= k_D(t_I - t_J)$ & $t_L $ &$= x_{11} - x_{16}$\\ 
+$t_M $ &$= t_I + t_J$ & $t_N $ &$= x_6 - x_{21}$ & $t_O $ &$= x_9$ & $t_P $ &$= t_O + x_{24}$ & $t_Q $ &$= x_{19}$\\ 
+$t_R $ &$= x_{14} + t_Q$ & $t_S $ &$= k_D(t_P - t_R)$ & $t_T $ &$= x_{14} - t_Q$ & $t_U $ &$= t_P + t_R$ & $t_V $ &$= t_O - x_{24}$\\ 
+$t_W $ &$= x_1 + t_M$ & $t_X $ &$= x_4 + t_U$ & $t_Y $ &$= t_W + t_X$ & $t_Z $ &$= k_xt_T + k_Bt_V$ & $t_{10} $ &$= k_Bt_T - k_xt_V$\\ 
+$t_{11} $ &\multicolumn{3}{l|}{$= x_4 - k_Ct_U$} & $t_{12} $ &$= t_S + t_{11}$ & $t_{13} $ &$= t_{11} - t_S$ & $t_{14} $ &$= k_ct_{12} - k_yt_Z$\\ 
+$t_{15} $ &\multicolumn{3}{l|}{$= k_zt_{10} - k_dt_{13}$} & $t_{16} $ &$= k_ht_{12} + k_ut_Z$ & $t_{17} $ &\multicolumn{3}{l|}{$= k_it_{13} + k_vt_{10}$}\\ 
+$t_{18} $ &$= k_xt_L + k_Bt_N$ & $t_{19} $ &$= k_Bt_L - k_xt_N$ & $t_{1a} $ &$= x_1 - k_Ct_M$ & $t_{1b} $ &$= t_K + t_{1a}$ & $t_{1c} $ &$= t_{1a} - t_K$\\ 
+$t_{1d} $ &\multicolumn{5}{l|}{$= k_3t_{1b} - k_qt_{18}$} & $t_{1e} $ &\multicolumn{3}{l|}{$= k_4t_{1c} + k_rt_{19}$}\\ 
+$t_{1f} $ &\multicolumn{3}{l|}{$= k_8t_{1b} + k_lt_{18}$} & $t_{1g} $ &\multicolumn{3}{l|}{$= k_mt_{19} - k_9t_{1c}$} & $t_{1h} $ &$= k_D(t_Y - t_p)$\\ 
+$t_{1i} $ &\multicolumn{3}{l|}{$= t_Y + t_p$} & $t_{1j} $ &$= t_a - k_Ct_{1i}$ & $t_{1k} $ &$= t_W - t_X$ & $t_{1l} $ &$= t_n - t_o$\\ 
+$t_{1m} $ &\multicolumn{3}{l|}{$= i(k_5t_{1l} + k_6t_{1k})$} & $t_{1n} $ &\multicolumn{3}{l|}{$= i(k_6t_{1l} - k_5t_{1k})$} & $X_0 $ &$= t_a + t_{1i}$\\ 
+$t_{1o} $ &$= t_{1j} - t_{1h}$ & $X_{10} $ &$= t_{1n} + t_{1o}$ & $X_{15} $ &$= t_{1o} - t_{1n}$ & $t_{1p} $ &$= t_{1h} + t_{1j}$ & $X_5 $ &$= t_{1p} - t_{1m}$\\ 
+$X_{20} $ &$= t_{1m} + t_{1p}$ & $t_{1q} $ &$= t_{15} - t_{1e}$ & $t_{1r} $ &$= t_{1g} + t_{17}$ & $t_{1s} $ &$= t_H - t_y$ & $t_{1t} $ &$= t_F - t_w$\\ 
+$t_{1u} $ &\multicolumn{3}{l|}{$= k_kt_{10} - k_7t_{13}$} & $t_{1v} $ &\multicolumn{3}{l|}{$= k_ft_{1c} + k_nt_{19}$} & $t_{1w} $ &$= t_{1u} - t_{1v}$\\ 
+$t_{1x} $ &$= k_et_D - k_At_A$ & $t_{1y} $ &$= k_bt_u + k_tt_r$ & $t_{1z} $ &$= t_{1x} - t_{1y}$ & $t_{1A} $ &\multicolumn{3}{l|}{$= k_at_{1c} - k_st_{19}$}\\ 
+$t_{1B} $ &\multicolumn{3}{l|}{$= k_2t_{13} + k_pt_{10}$} & $t_{1C} $ &$= t_{1A} - t_{1B}$ & $t_{1D} $ &$= k_ot_r - k_gt_u$ & $t_{1E} $ &$= k_jt_D + k_wt_A$\\ 
+$t_{1F} $ &\multicolumn{3}{l|}{$= t_{1D} - t_{1E}$} & $t_{1G} $ &$= t_{1g} - t_{17}$ & $t_{1H} $ &$= t_H + t_y$ & $t_{1I} $ &$= t_{1G} + t_{1H}$\\ 
+$t_{1J} $ &\multicolumn{3}{l|}{$= k_D(t_{1G} - t_{1H})$} & $t_{1K} $ &$= t_7 - k_Ct_{1I}$ & $t_{1L} $ &$= t_9 - t_4$ & $t_{1M} $ &$= t_{1e} + t_{15}$\\ 
+$t_{1N} $ &$= t_F + t_w$ & $t_{1O} $ &$= t_{1M} + t_{1N}$ & $t_{1P} $ &\multicolumn{3}{l|}{$= k_D(t_{1M} - t_{1N})$} & $t_{1Q} $ &$= t_{1L} - k_Ct_{1O}$\\ 
+$t_{1R} $ &\multicolumn{3}{l|}{$= i(t_7 + t_{1I})$} & $t_{1S} $ &$= t_{1L} + t_{1O}$ & $X_2 $ &$= t_{1R} + t_{1S}$ & $X_{23} $ &$= t_{1S} - t_{1R}$\\ 
+$t_{1T} $ &\multicolumn{3}{l|}{$= i(t_{1w} + t_{1F} - t_7)$} & $t_{1U} $ &\multicolumn{3}{l|}{$= t_{1L} + t_{1C} + t_{1z}$} & $X_3 $ &$= t_{1T} + t_{1U}$\\ 
+$X_{22} $ &$= t_{1U} - t_{1T}$ & $t_{1V} $ &\multicolumn{3}{l|}{$= i(t_{1J} + t_{1K} + k_6t_{1q} - k_5t_{1t})$} & $t_{1W} $ &\multicolumn{3}{l|}{$= t_{1P} + t_{1Q} + k_5t_{1s} + k_6t_{1r}$}\\ 
+$X_7 $ &$= t_{1V} + t_{1W}$ & $X_{18} $ &$= t_{1W} - t_{1V}$ & $t_{1X} $ &\multicolumn{5}{l|}{$= i(t_{1K} + k_6t_{1t} + k_5t_{1q} - t_{1J})$}\\ 
+$t_{1Y} $ &\multicolumn{5}{l|}{$= t_{1Q} - k_6t_{1s} - t_{1P} + k_5t_{1r}$} & $X_{12} $ &$= t_{1X} + t_{1Y}$ & $X_{13} $ &$= t_{1Y} - t_{1X}$\\ 
+$t_{1Z} $ &\multicolumn{9}{l|}{$= t_{1L} - k_6(t_{1v} + t_{1u}) - k_5(t_{1E} + t_{1D}) - k_0t_{1z} + k_1t_{1C}$}\\ 
+$t_{20} $ &\multicolumn{7}{l|}{$= i(k_1t_{1w} - k_6(t_{1A} + t_{1B}) - k_0t_{1F} - k_5(t_{1x} + t_{1y}) - t_7)$} & $X_{17} $ &$= t_{1Z} - t_{20}$\\ 
+$X_8 $ &$= t_{1Z} + t_{20}$ & $t_{21} $ &$= t_{14} - t_{1d}$ & $t_{22} $ &$= t_{16} - t_{1f}$ & $t_{23} $ &$= t_x - t_G$ & $t_{24} $ &$= t_E - t_v$\\ 
+$t_{25} $ &\multicolumn{3}{l|}{$= k_ct_{1b} + k_yt_{18}$} & $t_{26} $ &$= k_bt_{12} + k_tt_Z$ & $t_{27} $ &$= t_{25} - t_{26}$ & $t_{28} $ &$= k_it_C + k_vt_z$\\ 
+$t_{29} $ &$= k_7t_t + k_kt_q$ & $t_{2a} $ &$= t_{28} + t_{29}$ & $t_{2b} $ &\multicolumn{3}{l|}{$= k_ut_{18} - k_ht_{1b}$} & $t_{2c} $ &$= k_gt_{12} - k_ot_Z$\\ 
+$t_{2d} $ &$= t_{2b} + t_{2c}$ & $t_{2e} $ &$= k_zt_z - k_dt_C$ & $t_{2f} $ &$= k_pt_q - k_2t_t$ & $t_{2g} $ &$= t_{2e} + t_{2f}$ & $t_{2h} $ &$= t_{1f} + t_{16}$\\ 
+$t_{2i} $ &$= t_G + t_x$ & $t_{2j} $ &$= t_{2h} + t_{2i}$ & $t_{2k} $ &$= k_Ct_{2j} - t_5$ & $t_{2l} $ &\multicolumn{3}{l|}{$= k_D(t_{2i} - t_{2h})$}\\ 
+$t_{2m} $ &$= t_4 + t_9$ & $t_{2n} $ &$= t_{1d} + t_{14}$ & $t_{2o} $ &$= t_E + t_v$ & $t_{2p} $ &$= t_{2n} + t_{2o}$ & $t_{2q} $ &$= t_{2m} - k_Ct_{2p}$\\ 
+$t_{2r} $ &\multicolumn{3}{l|}{$= k_D(t_{2n} - t_{2o})$} & $t_{2s} $ &$= t_{2m} + t_{2p}$ & $t_{2t} $ &$= i(t_5 + t_{2j})$ & $X_1 $ &$= t_{2s} - t_{2t}$\\ 
+$X_{24} $ &$= t_{2s} + t_{2t}$ & $t_{2u} $ &\multicolumn{3}{l|}{$= t_{2m} + t_{27} + t_{2g}$} & $t_{2v} $ &\multicolumn{3}{l|}{$= i(t_5 + t_{2d} - t_{2a})$}\\ 
+$X_{21} $ &$= t_{2u} - t_{2v}$ & $X_4 $ &$= t_{2u} + t_{2v}$ & $t_{2w} $ &\multicolumn{5}{l|}{$= i(k_6t_{24} + k_5t_{21} + t_{2k} - t_{2l})$}\\ 
+$t_{2x} $ &\multicolumn{5}{l|}{$= t_{2q} - t_{2r} - k_6t_{23} + k_5t_{22}$} & $X_{11} $ &$= t_{2w} + t_{2x}$ & $X_{14} $ &$= t_{2x} - t_{2w}$\\ 
+$t_{2y} $ &\multicolumn{3}{l|}{$= i(k_6t_{21} - k_5t_{24} + t_{2k} + t_{2l})$} & $t_{2z} $ &\multicolumn{3}{l|}{$= t_{2r} + t_{2q} + k_5t_{23} + k_6t_{22}$} & $X_6 $ &$= t_{2y} + t_{2z}$\\ 
+$X_{19} $ &$= t_{2z} - t_{2y}$ & $t_{2A} $ &\multicolumn{7}{l|}{$= i(t_5 + k_0t_{2a} - k_6(t_{25} + t_{26}) + k_5(t_{2f} - t_{2e}) + k_1t_{2d})$}\\ 
+$t_{2B} $ &\multicolumn{5}{l|}{$= t_{2m} - k_0t_{2g} + k_5(t_{29} - t_{28}) + k_6(t_{2b} - t_{2c}) + k_1t_{27}$} & $X_9 $ &$= t_{2A} + t_{2B}$ & $X_{16} $ &$= t_{2B} - t_{2A}$\\ 
+\bottomrule\end{tabular}
